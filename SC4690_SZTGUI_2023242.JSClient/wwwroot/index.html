@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Owner UI</title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+<h1 class="purple-border">Owner Catalog</h1>
+<div id="formdiv">
+    <label>
+        Owner Age
+    </label>
+    <input type="text" id="ownerage" />
+    <label>
+        Owner Name
+    </label>
+    <input type="text" id="ownername" />
+    <label>
+        Owner PhoneNumber
+    </label>
+    <input type="text" id="ownerphonenumber" />
+    <label>
+        Owner ID
+    </label>
+    <input type="text" id="ownerid" />
+    <label>
+        Owner Salary
+    </label>
+    <input type="text" id="ownersalary" />
+
+
+    <button type="button" onclick="create()">Add Owner</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>
+                Age
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                PhoneNumber
+            </th>
+            <th>
+                OwnerId
+            </th>
+            <th>
+                Salary
+            </th>
+            <th>
+                Actions
+            </th>
+
+        </tr>
+    </thead>
+    <tbody id="resultarea">
+    </tbody>
+</table>
+
+
+
+
+    <script src="Script.js"></script>
+</body>
+</html>
