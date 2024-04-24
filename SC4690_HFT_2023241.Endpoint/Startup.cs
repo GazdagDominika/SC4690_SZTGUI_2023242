@@ -19,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SC4690_HFT_2023241.Endpoint.Services;
 
 namespace SC4690_HFT_2023241.Endpoint
 {
@@ -46,6 +47,7 @@ namespace SC4690_HFT_2023241.Endpoint
             services.AddTransient<ISmartPhoneLogic, SmartPhoneLogic>();
             services.AddTransient<ITabletLogic, TabletLogic>();
 
+            services.AddSignalR();
 
             services.AddSwaggerGen(c =>
             {
@@ -84,6 +86,7 @@ namespace SC4690_HFT_2023241.Endpoint
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<SignalRHub>("/hub");
             });
         }
     }
