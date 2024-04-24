@@ -65,7 +65,6 @@ namespace SC4690_SZTGUI_2023242.WpfClient
 
         public MainWindowViewModel()
         {
-            SelectedOwner = new Owner();
             if(!IsInDesignMode)
             {
                 Owners = new RestCollection<Owner>("http://localhost:25418/", "owner");

@@ -14,7 +14,7 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <ListBox ItemsSource="{Binding Owners}" SelectedItem="{Binding SelectedOwner}">
+        <ListBox ItemsSource="{Binding Owners}" SelectedItem="{Binding SelectedOwner}" Background="Pink">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -29,9 +29,19 @@
 
         </ListBox>
         <StackPanel Grid.Column="1">
-            <Button Content="Create Owner" Command="{Binding CreateOwnerCommand}" Margin="10" Padding="10"></Button>
-            <Button Content="Delete Owner" Command="{Binding DeleteOwnerCommand}" Margin="10" Padding="10"></Button>
-            <Button Content="Update Owner" Command="{Binding UpdateOwnerCommand}" Margin="10" Padding="10"></Button>
+            <Label Content="Age" Background="Lavender" Padding="10"/>
+            <TextBox Text="{Binding SelectedOwner.Age}" Padding="10"/>
+            <Label Content="Name" Background="Lavender" Padding="10"/>
+            <TextBox Text="{Binding SelectedOwner.Name}" Padding="10"/>
+            <Label Content="PhoneNumber" Background="Lavender" Padding="10"/>
+            <TextBox Text="{Binding SelectedOwner.PhoneNumber}" Padding="10"/>
+            <Label Content="ID" Background="Lavender" Padding="10"/>
+            <TextBox Text="{Binding SelectedOwner.OwnerID}" Padding="10"/>
+            <Label Content="Salary" Background="Lavender" Padding="10"/>
+            <TextBox Text="{Binding SelectedOwner.Salary}" Padding="10"/>
+            <Button Content="Create Owner" Command="{Binding CreateOwnerCommand}" Margin="10" Padding="10" Background="LavenderBlush"></Button>
+            <Button Content="Delete Owner" Command="{Binding DeleteOwnerCommand}" Margin="10" Padding="10" Background="LavenderBlush"></Button>
+            <Button Content="Update Owner" Command="{Binding UpdateOwnerCommand}" Margin="10" Padding="10" Background="LavenderBlush"></Button>
         </StackPanel>
 
     </Grid>
