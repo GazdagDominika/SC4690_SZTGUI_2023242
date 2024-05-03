@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Main UI</title>
     <link rel="stylesheet" href="Style.css" />
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +19,7 @@
             color: purple;
         }
 
-        h2{
+        h2 {
             color: purple;
         }
 
@@ -36,7 +37,24 @@
             button:hover {
                 background-color: purple;
             }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
     </style>
+    
 </head>
 <body>
     <h1>Main Catalog</h1>
@@ -83,33 +101,45 @@
 
     <div id="alldeviceprice"></div>
 
+
+    <div id="youngritchowners" style="display: none;">
+        <table id="resultarea">
+            <tr>
+                <th>Age</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Owner ID</th>
+                <th>Salary</th>
+            </tr>
+        </table>
+    </div>
     <button onclick="getYoungRitchOwners()">Young Ritch Owners</button>
 
 
-
-    <table>
-        <thead>
+    <div id="goldsmartphones" style="display: none;">
+        <table id="resultarea">
             <tr>
-                <th>
-                    Age
-                </th>
-                <th>
-                    Name
-                </th>
-                <th>
-                    PhoneNumber
-                </th>
-                <th>
-                    OwnerId
-                </th>
-                <th>
-                    Salary
-                </th>
+                <th>Phone Name</th>
+                <th>Price</th>
+                <th>Colour</th>
             </tr>
-        </thead>
-        <tbody id="resultarea">
-        </tbody>
-    </table>
+        </table>
+    </div>
+    <button onclick="getGoldSmartPhones()">Gold Phones</button>
+
+
+    <div id="sizes" style="display: none;">
+        <table id="resultarea">
+            <tr>
+                <th>Size</th>
+                <th>Average Price</th>
+                <th>Count</th>
+            </tr>
+        </table>
+    </div>
+    <button onclick="getTabletSizes()">Get Tablet Sizes</button>
+
+
 
 
 

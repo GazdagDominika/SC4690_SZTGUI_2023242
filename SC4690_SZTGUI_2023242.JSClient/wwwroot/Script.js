@@ -5,6 +5,8 @@ let hugephone = [];
 let appleuser = [];
 let alldeviceprice = [];
 let youngritchowners = [];
+let goldsmartphones = [];
+let tabletsizes = [];
 
 async function getPhoneSumPrice() {
     let userId1 = document.getElementById('userId1').value; // Get the user ID from the input field
@@ -114,7 +116,58 @@ async function getYoungRitchOwners() {
 
 function showYoungRitchOwners() {
     document.getElementById('youngritchowners').style.display = "flex";
-    youngritchowners.forEach(t => { document.getElementById('resultarea').innerHTML += "<tr><td> " + t.age + "</td><td> " + t.name + "</td><td> " + t.phoneNumber + "</td><td> " + t.ownerID + "</td><td> " + t.salary + "</td></tr>" });
+    let html = '';
+    youngritchowners.forEach(t => {
+        html += `<tr><td>${t.age}</td><td>${t.name}</td><td>${t.phoneNumber}</td><td>${t.ownerID}</td><td>${t.salary}</td></tr>`;
+        t.laptops.forEach(laptop => {
+            html += `<tr><td colspan="5">Laptop: ${laptop.laptopName}, ID: ${laptop.laptopID}, Price: ${laptop.price}, Display Size: ${laptop.displaySize}, Colour: ${laptop.colour}</td></tr>`;
+        });
+        t.tablets.forEach(tablet => {
+            html += `<tr><td colspan="5">Tablet: ${tablet.tabletName}, ID: ${tablet.tabletID}, Price: ${tablet.price}, Size: ${tablet.size}, Colour: ${tablet.colour}</td></tr>`;
+        });
+        t.smartPhones.forEach(phone => {
+            html += `<tr><td colspan="5">Phone: ${phone.phoneName}, ID: ${phone.phoneID}, Price: ${phone.price}, Size: ${phone.size}, Colour: ${phone.colour}</td></tr>`;
+        });
+    });
+    document.getElementById('resultarea').innerHTML = html;
 }
 
 
+
+async function getGoldSmartPhones() {
+
+    await fetch(`http://localhost:25418/devicestat/goldsmartphones`) // Use backticks here
+        .then(x => x.json())
+        .then(y => {
+            goldsmartphones = y;
+            showGoldSmartPhones();
+        });
+}
+
+function showGoldSmartPhones() {
+    document.getElementById('goldsmartphones').style.display = "flex";
+    let html = '';
+    goldsmartphones.forEach(t => {
+        html += `<tr><td>${t.phoneName}</td><td>${t.price}</td><td>${t.colour}</td></tr>`;
+    });
+    document.getElementById('resultarea').innerHTML = html;
+}
+
+async function getTabletSizes() {
+    await fetch(`http://localhost:25418/devicestat/tabletssize`)
+        .then(x => x.json())
+        .then(y => {
+            tabletsizes = y;
+            showTabletSizes();
+        });
+}
+
+
+function showTabletSizes() {
+    document.getElementById('sizes').style.display = "flex";
+    let html = '';
+    tabletsizes.forEach(t => {
+        html += `<tr><td>${t.size}</td><td>${t.avGprice}</td><td>${t.count}</td></tr>`;
+    });
+    document.getElementById('resultarea').innerHTML = html;
+}
