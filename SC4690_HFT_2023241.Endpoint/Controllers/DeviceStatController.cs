@@ -23,7 +23,7 @@ namespace SC4690_HFT_2023241.Endpoint.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public int LaptopCount(int id)
         {
             return logic.LaptopCount(id);

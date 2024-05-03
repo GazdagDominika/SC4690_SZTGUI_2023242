@@ -1,5 +1,15 @@
-﻿.purple-border {
-    border: 2px solid lightpink; /* Lila keret 2px vastagságú */
-    padding: 10px; /* Belső térköz */
-    border-radius: 8px; /* Kerekített sarkok */
+﻿table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
 }

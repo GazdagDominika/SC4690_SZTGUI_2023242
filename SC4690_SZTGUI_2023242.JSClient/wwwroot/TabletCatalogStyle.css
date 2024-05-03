@@ -28,9 +28,7 @@ tr:hover {
     background-color: #ddd; /* Egérrel fölé kerülve */
 }
 
-h1{
-    text-align: center;
-} 
+
 
 
 
@@ -80,7 +78,7 @@ h1{
     border: 2px solid lightpink; /* Lila keret 2px vastagságú */
     padding: 10px; /* Belső térköz */
     border-radius: 8px; /* Kerekített sarkok */
-    text-align: center;
+    text-align:center;
 }
 
 #updateformdiv {

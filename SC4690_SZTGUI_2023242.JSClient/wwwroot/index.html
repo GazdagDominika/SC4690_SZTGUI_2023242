@@ -4,13 +4,116 @@
     <meta charset="utf-8" />
     <title>Main UI</title>
     <link rel="stylesheet" href="Style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            border-bottom: 2px solid purple;
+            padding-bottom: 10px;
+            color: purple;
+        }
+
+        h2{
+            color: purple;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: mediumpurple;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: purple;
+            }
+    </style>
 </head>
 <body>
-    <h1 class="purple-border">Main Catalog</h1>
+    <h1>Main Catalog</h1>
 
-    <button onclick="window.location.href='OwnerCatalog.html'" style="padding: 10px 20px; background-color: mediumpurple; color: white; border: none; border-radius: 5px; cursor: pointer;">Go to Owner Catalog</button>
-    <button onclick="window.location.href='LaptopCatalog.html'" style="padding: 10px 20px; background-color: mediumpurple; color: white; border: none; border-radius: 5px; cursor: pointer;">Go to Laptop Catalog</button>
+    <button onclick="window.location.href='OwnerCatalog.html'">Go to Owner Catalog</button>
+    <button onclick="window.location.href='LaptopCatalog.html'">Go to Laptop Catalog</button>
+    <button onclick="window.location.href='TabletCatalog.html'">Go to Tablet Catalog</button>
+    <button onclick="window.location.href='SmartPhoneCatalog.html'">Go to Phone Catalog</button>
 
+    <h2>Non Cruds</h2>
+    <label for="userId">Enter User ID:</label>
+    <input type="text" id="userId1">
+    <button onclick="getPhoneSumPrice()">Get Phone Sum Price</button>
+
+    <div id="phonesumprice"></div>
+
+    <label for="userId">Enter User ID:</label>
+    <input type="text" id="userId2">
+    <button onclick="getLaptopCount()">Count of Laptops</button>
+
+    <div id="laptopcount"></div>
+
+    <label for="userId">Enter User ID:</label>
+    <input type="text" id="userId3">
+    <button onclick="getRosegoldTablet()">Has Rosegold Tablet</button>
+
+    <div id="rosegoldtablet"></div>
+
+    <label for="userId">Enter User ID:</label>
+    <input type="text" id="userId4">
+    <button onclick="getHugePhone()">Has Huge Phone</button>
+
+    <div id="hugephone"></div>
+
+    <label for="userId">Enter User ID:</label>
+    <input type="text" id="userId5">
+    <button onclick="getAppleUser()">Has  Apple Device</button>
+
+    <div id="appleuser"></div>
+
+    <label for="userId">Enter User ID:</label>
+    <input type="text" id="userId6">
+    <button onclick="getAllDevicePrice()">All Device Price</button>
+
+    <div id="alldeviceprice"></div>
+
+    <button onclick="getYoungRitchOwners()">Young Ritch Owners</button>
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Age
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    PhoneNumber
+                </th>
+                <th>
+                    OwnerId
+                </th>
+                <th>
+                    Salary
+                </th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+
+
+
+    <script src="Script.js"></script>
 
 </body>
 </html>

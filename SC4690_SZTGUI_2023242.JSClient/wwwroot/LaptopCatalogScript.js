@@ -76,7 +76,7 @@ function showupdate(id) {
     document.getElementById('laptopdisplaysizetoupdate').value = laptops.find(t => t['laptopID'] == id)['displaySize'];
     document.getElementById('laptopcolourtoupdate').value = laptops.find(t => t['laptopID'] == id)['colour'];
     document.getElementById('updateformdiv').style.display = 'flex';
-    ownerIDtoUpdate = id;
+    laptopIDtoUpdate = id;
 }
 
 function update() {
@@ -119,7 +119,7 @@ function create() {
     fetch("http://localhost:25418/laptop", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ laptopName: laptopName, laptopID: laptopID, ownerID: ownerID, price: price, displaySize: displaySize, colourŰ: colour }),
+        body: JSON.stringify({ laptopName: laptopName, laptopID: laptopID, ownerID: ownerID, price: price, displaySize: displaySize, colour: colour }),
     })
         .then(response => {
             if (!response.ok) {

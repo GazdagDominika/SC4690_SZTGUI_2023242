@@ -30,6 +30,7 @@ tr:hover {
 
 
 
+
 #formdiv {
     max-width: 400px;
     margin: 20px auto;
@@ -76,6 +77,7 @@ tr:hover {
     border: 2px solid lightpink; /* Lila keret 2px vastagságú */
     padding: 10px; /* Belső térköz */
     border-radius: 8px; /* Kerekített sarkok */
+    text-align: center;
 }
 
 #updateformdiv {
