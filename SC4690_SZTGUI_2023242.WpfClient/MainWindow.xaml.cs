@@ -24,5 +24,30 @@ namespace SC4690_SZTGUI_2023242.WpfClient
         {
             InitializeComponent();
         }
+
+        private void OwnerButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Megnyitjuk az OwnerWindow-t
+            OwnerWindow ownerWindow = new OwnerWindow();
+            ownerWindow.ShowDialog();
+        }
+
+        private void LaptopButton_Click(object sender, RoutedEventArgs e)
+        {
+            LaptopWindow laptopWindow = new LaptopWindow();
+            laptopWindow.ShowDialog();
+        }
+
+        private void TabletButton_Click(object sender, RoutedEventArgs e)
+        {
+            TabletWindow tabletWindow = new TabletWindow();
+            tabletWindow.ShowDialog();
+        }
+
+        private void SmartPhoneButton_Click(object sender, RoutedEventArgs e)
+        {
+            SmartPhoneWindow smartPhoneWindow = new SmartPhoneWindow();
+            smartPhoneWindow.ShowDialog();
+        }
     }
 }

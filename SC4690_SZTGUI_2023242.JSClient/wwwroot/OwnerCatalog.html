@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="OwnerCatalogStyle.css" />
+
+    <title></title>
+</head>
+<body>
+    <h1 class="purple-border">Owner Catalog</h1>
+
+    <style>
+        .form-container {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Optional: Adjust width as needed */
+        #formdiv, #updateformdiv {
+            width: 45%; /* Adjust width as needed */
+        }
+    </style>
+
+    <div id="formdiv" class="form-container">
+        <label>
+            Owner Age
+        </label>
+        <input type="text" id="ownerage" />
+        <label>
+            Owner Name
+        </label>
+        <input type="text" id="ownername" />
+        <label>
+            Owner PhoneNumber
+        </label>
+        <input type="text" id="ownerphonenumber" />
+        <label>
+            Owner ID
+        </label>
+        <input type="text" id="ownerid" />
+        <label>
+            Owner Salary
+        </label>
+        <input type="text" id="ownersalary" />
+
+
+        <button type="button" onclick="create()">Add Owner</button>
+    </div>
+
+    <div id="updateformdiv" class="form-container">
+        <label>
+            Owner Age
+        </label>
+        <input type="text" id="owneragetoupdate" />
+        <label>
+            Owner Name
+        </label>
+        <input type="text" id="ownernametoupdate" />
+        <label>
+            Owner PhoneNumber
+        </label>
+        <input type="text" id="ownerphonenumbertoupdate" />
+        <label>
+            Owner ID
+        </label>
+        <input type="text" id="owneridtoupdate" />
+        <label>
+            Owner Salary
+        </label>
+        <input type="text" id="ownersalarytoupdate" />
+
+
+        <button type="button" onclick="update()">Update Owner</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Age
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    PhoneNumber
+                </th>
+                <th>
+                    OwnerId
+                </th>
+                <th>
+                    Salary
+                </th>
+                <th>
+                    Actions
+                </th>
+
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+    <p></p>
+
+    <button onclick="window.location.href='index.html'" style="padding: 10px 20px; background-color: #9b59b6; color: white; border: none; border-radius: 5px; cursor: pointer;">Go to the Main Catalog</button>
+
+
+    <script src="OwnerCatalogScript.js"></script>
+
+</body>
+</html>

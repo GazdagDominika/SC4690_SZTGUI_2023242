@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using SC4690_HFT_2023241.Endpoint.Services;
 using SC4690_HFT_2023241.Logic.Interfaces;
 using SC4690_HFT_2023241.Models;
 using System.Collections.Generic;
@@ -12,10 +14,12 @@ namespace SC4690_HFT_2023241.Endpoint.Controllers
     {
 
         ITabletLogic logic;
+        IHubContext<SignalRHub> hub;
 
-        public TabletController(ITabletLogic logic)
+        public TabletController(ITabletLogic logic, IHubContext<SignalRHub> hub)
         {
             this.logic = logic;
+            this.hub = hub;
         }
 
 

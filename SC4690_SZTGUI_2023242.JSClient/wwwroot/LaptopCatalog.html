@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="LaptopCatalogStyle.css" />
+
+    <title></title>
+</head>
+<body>
+    <h1 class="purple-border">Laptop Catalog</h1>
+
+    <style>
+        .form-container {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Optional: Adjust width as needed */
+        #formdiv, #updateformdiv {
+            width: 45%; /* Adjust width as needed */
+        }
+    </style>
+
+    <div id="formdiv" class="form-container">
+        <label>
+            Laptop Name
+        </label>
+        <input type="text" id="laptopname" />
+        <label>
+            Laptop ID
+        </label>
+        <input type="text" id="laptopid" />
+        <label>
+            Owner ID
+        </label>
+        <input type="text" id="laptopownerid" />
+        <label>
+            Price
+        </label>
+        <input type="text" id="laptopprice" />
+        <label>
+            Display Size
+        </label>
+        <input type="text" id="laptopdisplaysize" />
+        <label>
+            Colour
+        </label>
+        <input type="text" id="laptopcolour" />
+
+
+        <button type="button" onclick="create()">Add Laptop</button>
+    </div>
+
+    <div id="updateformdiv" class="form-container">
+        <label>
+            Laptop Name
+        </label>
+        <input type="text" id="laptopnametoupdate" />
+        <label>
+            Laptop ID
+        </label>
+        <input type="text" id="laptopidtoupdate" />
+        <label>
+            Owner ID
+        </label>
+        <input type="text" id="laptopowneridtoupdate" />
+        <label>
+            Price
+        </label>
+        <input type="text" id="laptoppricetoupdate" />
+        <label>
+            Display Size
+        </label>
+        <input type="text" id="laptopdisplaysizetoupdate" />
+        <label>
+            Colour
+        </label>
+        <input type="text" id="laptopcolourtoupdate" />
+
+
+        <button type="button" onclick="update()">Update Laptop</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Laptop Name
+                </th>
+                <th>
+                    Laptop ID
+                </th>
+                <th>
+                    Owner ID
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Display Size
+                </th>
+                <th>
+                    Colour
+                </th>
+
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+
+    <button onclick="window.location.href='index.html'" style="padding: 10px 20px; background-color: lightpink; color: white; border: none; border-radius: 5px; cursor: pointer;">Go to the Main Catalog</button>
+
+
+
+    <script src="LaptopCatalogScript.js"></script>
+</body>
+</html>

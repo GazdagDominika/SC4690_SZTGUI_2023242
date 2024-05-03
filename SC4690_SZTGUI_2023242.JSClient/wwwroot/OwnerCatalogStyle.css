@@ -1,0 +1,120 @@
+﻿table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Táblázat fejléc formázás */
+th {
+    background-color: #9b59b6; /* Zöld háttérszín */
+    color: white; /* Fehér betűszín */
+    font-weight: bold; /* Félkövér betűtípus */
+    padding: 8px; /* Belső térköz */
+    border: 1px solid #ddd; /* Keret */
+}
+
+/* Táblázat sorok formázása */
+td {
+    padding: 8px; /* Belső térköz */
+    border: 1px solid #ddd; /* Keret */
+}
+
+/* Páros sorok háttérszíne */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Szürke háttérszín */
+}
+
+/* Egérrel való interakciók formázása */
+tr:hover {
+    background-color: #ddd; /* Egérrel fölé kerülve */
+}
+
+
+
+#formdiv {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+    #formdiv label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #formdiv input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    #formdiv button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #9b59b6;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        #formdiv button:hover {
+            background-color: mediumpurple;
+        }
+
+
+.purple-border {
+    border: 2px solid #9b59b6; /* Lila keret 2px vastagságú */
+    padding: 10px; /* Belső térköz */
+    border-radius: 8px; /* Kerekített sarkok */
+}
+
+#updateformdiv {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+    #updateformdiv label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #updateformdiv input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    #updateformdiv button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #9b59b6;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        #updateformdiv button:hover {
+            background-color: mediumpurple;
+        }

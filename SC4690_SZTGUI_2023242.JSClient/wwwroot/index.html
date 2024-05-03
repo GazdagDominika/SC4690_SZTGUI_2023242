@@ -2,67 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Owner UI</title>
+    <title>Main UI</title>
     <link rel="stylesheet" href="Style.css" />
 </head>
 <body>
-<h1 class="purple-border">Owner Catalog</h1>
-<div id="formdiv">
-    <label>
-        Owner Age
-    </label>
-    <input type="text" id="ownerage" />
-    <label>
-        Owner Name
-    </label>
-    <input type="text" id="ownername" />
-    <label>
-        Owner PhoneNumber
-    </label>
-    <input type="text" id="ownerphonenumber" />
-    <label>
-        Owner ID
-    </label>
-    <input type="text" id="ownerid" />
-    <label>
-        Owner Salary
-    </label>
-    <input type="text" id="ownersalary" />
+    <h1 class="purple-border">Main Catalog</h1>
+
+    <button onclick="window.location.href='OwnerCatalog.html'" style="padding: 10px 20px; background-color: mediumpurple; color: white; border: none; border-radius: 5px; cursor: pointer;">Go to Owner Catalog</button>
+    <button onclick="window.location.href='LaptopCatalog.html'" style="padding: 10px 20px; background-color: mediumpurple; color: white; border: none; border-radius: 5px; cursor: pointer;">Go to Laptop Catalog</button>
 
 
-    <button type="button" onclick="create()">Add Owner</button>
-</div>
-<table>
-    <thead>
-        <tr>
-            <th>
-                Age
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                PhoneNumber
-            </th>
-            <th>
-                OwnerId
-            </th>
-            <th>
-                Salary
-            </th>
-            <th>
-                Actions
-            </th>
-
-        </tr>
-    </thead>
-    <tbody id="resultarea">
-    </tbody>
-</table>
-
-
-
-
-    <script src="Script.js"></script>
 </body>
 </html>
