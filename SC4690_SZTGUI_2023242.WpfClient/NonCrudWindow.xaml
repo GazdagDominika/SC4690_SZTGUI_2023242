@@ -6,7 +6,35 @@
         xmlns:local="clr-namespace:SC4690_SZTGUI_2023242.WpfClient"
         mc:Ignorable="d"
         Title="NonCrudWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Window.DataContext>
+        <local:NonCrudViewModel/>
+    </Window.DataContext>
+    <Grid Margin="0,-70,0,0">
+        <!-- Define row definitions -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Center the content horizontally -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- StackPanel to contain buttons -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Add buttons with some styling -->
+            <Button Content="LaptopCount" Command="{Binding ShowLaptopCount}" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+            <Button Content="PhoneSumPrice" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+            <Button Content="HugePhone" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+            <Button Content="AppleUser" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+            <Button Content="AllDevicePrice" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+            <Button Content="RoseGoldTablet" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+
+
+
+        </StackPanel>
+
     </Grid>
 </Window>

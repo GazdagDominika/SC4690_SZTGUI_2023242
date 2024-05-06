@@ -29,7 +29,7 @@
             <Button Content="Laptop" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="16" Click="LaptopButton_Click"/>
             <Button Content="Tablet" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="16" Click="TabletButton_Click"/>
             <Button Content="SmartPhone" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="16" Click="SmartPhoneButton_Click"/>
-            <Button Content="NonCrud" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="16"/>
+            <Button Content="NonCrud" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="16" Click="NonCrudButton_Click"/>
 
 
         </StackPanel>

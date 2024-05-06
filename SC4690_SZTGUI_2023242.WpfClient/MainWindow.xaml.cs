@@ -49,5 +49,11 @@ namespace SC4690_SZTGUI_2023242.WpfClient
             SmartPhoneWindow smartPhoneWindow = new SmartPhoneWindow();
             smartPhoneWindow.ShowDialog();
         }
+
+        private void NonCrudButton_Click(object sender, RoutedEventArgs e)
+        {
+           NonCrudWindow nonCrudWindow = new NonCrudWindow();
+            nonCrudWindow.ShowDialog();
+        }
     }
 }
