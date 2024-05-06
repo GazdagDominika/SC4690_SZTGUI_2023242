@@ -24,7 +24,8 @@ namespace SC4690_SZTGUI_2023242.WpfClient
             set { SetProperty(ref errorMessage, value); }
         }
 
-        private readonly RestService Rest;
+        private readonly RestService Rest_owner;
+        private readonly RestService Rest_tablet;
 
 
         public ICommand ShowLaptopCount { get; set; }
@@ -41,14 +42,16 @@ namespace SC4690_SZTGUI_2023242.WpfClient
 
         public NonCrudViewModel()
         {
-            if(!IsInDesignMode)
+            if (!IsInDesignMode)
             {
-                Rest = new RestService("http://localhost:25418/", "devicestat");
+                ;
+                Rest_owner = new RestService("http://localhost:25418/", "owner");
+                Rest_tablet = new RestService("http://localhost:25418/", "tablet");
+                ;
 
-
-                ShowLaptopCount = new RelayCommand(async () =>
+                ShowLaptopCount = new RelayCommand(() =>
                 {
-                    GetLaptopCount();
+                    GetLaptopCount(id);
                 });
             }
             
@@ -58,11 +61,11 @@ namespace SC4690_SZTGUI_2023242.WpfClient
         {
             MessageBox.Show(message, caption, button, icon);
         }
-        private async void GetLaptopCount()
+        private void GetLaptopCount(int id)
         {
             try
             {
-                int laptopcount = await Rest.GetSingleAsync<int>("/api/devicestat/laptopcount");
+                int laptopcount = Rest_owner.Get<int>(id, "DeviceStat/LaptopCount");
                 ShowMessageBox($"The count of the persons: {laptopcount}.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
 
             }
