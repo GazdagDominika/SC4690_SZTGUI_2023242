@@ -12,9 +12,14 @@ using Microsoft.Toolkit.Mvvm.ComponentModel;
 
 namespace SC4690_SZTGUI_2023242.WpfClient
 {
-    class NonCrudViewModel:ObservableRecipient
+    class NonCrudViewModel : ObservableRecipient
     {
-
+        private int _id;
+        public int Id
+        {
+            get { return _id; }
+            set { SetProperty(ref _id, value); }
+        }
 
         private string errorMessage;
 
@@ -29,6 +34,11 @@ namespace SC4690_SZTGUI_2023242.WpfClient
 
 
         public ICommand ShowLaptopCount { get; set; }
+        public ICommand ShowPhoneSumPrice { get; set; }
+        public ICommand ShowHugePhone { get; set; }
+        public ICommand ShowAppleUser { get; set; }
+        public ICommand ShowAllDevicePrice { get; set; }
+        public ICommand ShowRoseGoldTablet { get; set; }
 
         public static bool IsInDesignMode
         {
@@ -51,10 +61,34 @@ namespace SC4690_SZTGUI_2023242.WpfClient
 
                 ShowLaptopCount = new RelayCommand(() =>
                 {
-                    GetLaptopCount(id);
+                    GetLaptopCount(Id);
+                });
+                ShowPhoneSumPrice = new RelayCommand(() =>
+                {
+                    GetPhoneSumPrice(Id);
+                });
+
+                ShowHugePhone = new RelayCommand(() =>
+                {
+                    GetHugePhone(Id);
+                });
+
+                ShowAppleUser = new RelayCommand(() =>
+                {
+                    GetAppleUser(Id);
+                });
+
+                ShowAllDevicePrice = new RelayCommand(() =>
+                {
+                    GetAllDevicePrice(Id);
+                });
+
+                ShowRoseGoldTablet = new RelayCommand(() =>
+                {
+                    GetRoseGoldTablet(Id);
                 });
             }
-            
+
         }
 
         public void ShowMessageBox(string message, string caption, MessageBoxButton button, MessageBoxImage icon)
@@ -74,6 +108,69 @@ namespace SC4690_SZTGUI_2023242.WpfClient
 
             }
         }
+        private void GetPhoneSumPrice(int id)
+        {
+            try
+            {
+                int phoneSumPrice = Rest_owner.Get<int>(id, "DeviceStat/PhoneSumPrice");
+                ShowMessageBox($"The sum price of the phones: {phoneSumPrice}.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (ArgumentException ex)
+            {
+                // Handle exception
+            }
+        }
 
+        private void GetHugePhone(int id)
+        {
+            try
+            {
+                bool hasHugePhone = Rest_owner.Get<bool>(id, "DeviceStat/HugePhone");
+                ShowMessageBox($"Has huge phone: {hasHugePhone}.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (ArgumentException ex)
+            {
+                // Handle exception
+            }
+        }
+
+        private void GetAppleUser(int id)
+        {
+            try
+            {
+                bool isAppleUser = Rest_owner.Get<bool>(id, "DeviceStat/AppleUser");
+                ShowMessageBox($"Apple user: {isAppleUser}.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (ArgumentException ex)
+            {
+                // Handle exception
+            }
+        }
+
+        private void GetAllDevicePrice(int id)
+        {
+            try
+            {
+                double allDevicePrice = Rest_owner.Get<double>(id, "DeviceStat/AllDevicePrice");
+                ShowMessageBox($"All devices price: {allDevicePrice}.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (ArgumentException ex)
+            {
+                // Handle exception
+            }
+        }
+
+        private void GetRoseGoldTablet(int id)
+        {
+            try
+            {
+                bool hasRoseGoldTablet = Rest_owner.Get<bool>(id, "DeviceStat/RosegoldTablet");
+                ShowMessageBox($"Has rosegold tablet: {hasRoseGoldTablet}.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (ArgumentException ex)
+            {
+                // Handle exception
+            }
+        }
     }
 }

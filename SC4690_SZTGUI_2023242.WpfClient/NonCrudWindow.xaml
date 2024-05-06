@@ -23,14 +23,15 @@
         </Grid.ColumnDefinitions>
 
         <!-- StackPanel to contain buttons -->
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBox Grid.Row="1" Text="{Binding Id}" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <!-- Add buttons with some styling -->
             <Button Content="LaptopCount" Command="{Binding ShowLaptopCount}" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
-            <Button Content="PhoneSumPrice" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
-            <Button Content="HugePhone" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
-            <Button Content="AppleUser" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
-            <Button Content="AllDevicePrice" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
-            <Button Content="RoseGoldTablet" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+            <Button Content="PhoneSumPrice"  Command="{Binding ShowPhoneSumPrice}" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+            <Button Content="HugePhone" Command="{Binding ShowHugePhone}"  Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+            <Button Content="AppleUser" Command="{Binding ShowAppleUser}" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+            <Button Content="AllDevicePrice" Command="{Binding ShowAllDevicePrice}" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
+            <Button Content="RoseGoldTablet" Command="{Binding ShowRoseGoldTablet}" Width="100" Height="100" Margin="10" Background="LightPink" Foreground="White" FontWeight="Bold" FontSize="14"/>
 
 
 
