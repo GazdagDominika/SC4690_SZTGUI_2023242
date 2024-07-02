@@ -39,18 +39,26 @@ namespace SC4690_HFT_2023241.Endpoint.Controllers
         public void Create([FromBody] Tablet value)
         {
             this.logic.Create(value);
+            this.hub.Clients.All.SendAsync("TabletCreated", value);
+
         }
 
         [HttpPut]
         public void Update([FromBody] Tablet value)
         {
             this.logic.Update(value);
+            this.hub.Clients.All.SendAsync("TabletCreated", value);
+
         }
 
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            var TabletToDelete = this.logic.Read(id);
+
             this.logic.Delete(id);
+            this.hub.Clients.All.SendAsync("TabletCreated", TabletToDelete);
+
         }
     }
 }

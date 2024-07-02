@@ -40,7 +40,7 @@ async function start() {
 };
 
 async function getData() {
-    await fetch("http://localhost:25418/laptop")
+    await fetch("http://localhost:25418/laptop/hub")
         .then(x => x.json())
         .then(y => {
             laptops = y;

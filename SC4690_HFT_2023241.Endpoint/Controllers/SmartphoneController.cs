@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
+using Newtonsoft.Json.Linq;
 using SC4690_HFT_2023241.Endpoint.Services;
 using SC4690_HFT_2023241.Logic.Interfaces;
 using SC4690_HFT_2023241.Models;
@@ -40,18 +41,26 @@ namespace SC4690_HFT_2023241.Endpoint.Controllers
         public void Create([FromBody] SmartPhone value)
         {
             this.logic.Create(value);
+            this.hub.Clients.All.SendAsync("PhoneCreated", value);
+
         }
 
         [HttpPut]
         public void Update([FromBody] SmartPhone value)
         {
             this.logic.Update(value);
+            this.hub.Clients.All.SendAsync("PhoneCreated", value);
+
         }
 
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            var PhoneToDelete = this.logic.Read(id);
+
             this.logic.Delete(id);
+            this.hub.Clients.All.SendAsync("PhoneCreated", PhoneToDelete);
+
         }
     }
 }

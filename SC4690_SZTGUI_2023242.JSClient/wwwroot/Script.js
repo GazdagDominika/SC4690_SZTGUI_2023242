@@ -8,6 +8,9 @@ let youngritchowners = [];
 let goldsmartphones = [];
 let tabletsizes = [];
 
+
+
+
 async function getPhoneSumPrice() {
     let userId1 = document.getElementById('userId1').value; // Get the user ID from the input field
 
