@@ -6,6 +6,11 @@ getData();
 setUpSignalR();
 
 // domeszter
+// 1. create gombra kattintásű
+// 2. input mezőkből kiolvasni az adatokat
+// 3. fetchelni a post metódust
+// 4. fetchelés után a getData-t meghívni
+// 5. getData-ban a display-t meghívni
 
 function setUpSignalR() {
   connection = new signalR.HubConnectionBuilder()
